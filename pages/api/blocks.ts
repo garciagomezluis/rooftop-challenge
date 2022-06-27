@@ -9,6 +9,7 @@ export default async function handler(
 ) {
   const session = await unstable_getServerSession(req, res, {
     providers: [googleProvider],
+    secret: process.env.NEXTAUTH_SECRET
   });
 
   if (!session || !session.user || !session.user.email) {
