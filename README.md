@@ -71,4 +71,4 @@ Using this small app you will be able to log in and automatically get the sorted
 
 [Deployed app](https://rooftop-challenge-five.vercel.app/)
 
-![video](https://drive.google.com/file/d/1L13AMkxI2J64GeRPp5-91xIEv1NezYnA/view)
+![video](https://rooftop-challenge-five.vercel.app/video.gif)
