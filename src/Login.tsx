@@ -7,7 +7,6 @@ export const Login = () => {
   if (session && session.user) {
     return (
       <HStack>
-        <Box>Signed in as {session.user.email}</Box>
         <Button onClick={() => signOut()} colorScheme="pink">Sign out</Button>
       </HStack>
     );

@@ -44,12 +44,12 @@ export const Blocks = () => {
       bg="pink.500"
       fontWeight="bold"
       color="white"
-      borderRadius="lg"
-      w="max-content"
       mt="5"
     >
       <Gravatar email={block} size={50} />
-      <Text py="3" px="5">{block}</Text>
+      <Text px="5" textAlign="center" w="full" noOfLines={1}>
+        {block}
+      </Text>
     </HStack>
   ));
 };

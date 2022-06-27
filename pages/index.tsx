@@ -1,12 +1,22 @@
 import type { NextPage } from "next";
 import { useSession } from "next-auth/react";
 import Head from "next/head";
-import { chakra, HStack, Spacer, Text } from "@chakra-ui/react";
+import {
+  Button,
+  chakra,
+  HStack,
+  IconButton,
+  Spacer,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
 import { Blocks } from "../src/Blocks";
 import { Login } from "../src/Login";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const Home: NextPage = () => {
   const { data: session } = useSession();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <>
@@ -17,23 +27,27 @@ const Home: NextPage = () => {
       </Head>
 
       <chakra.main
-        bg="#e1e1e1"
-        w="75%"
         margin="0 auto"
-        p="5"
         border="3px solid"
         borderColor="pink.500"
         borderRadius="md"
         boxShadow="0px 0px 20px 0 #D53F8C"
-        minH="500px"
-        // h="80%"
+        minH="600px"
+        w={{md: "75%"}}
       >
-        <HStack>
+        {session && session.user && <Text bg="pink.500" textAlign="center" color="white">{session.user.email}</Text>}
+        <HStack p="5">
           <Spacer />
           <Login />
+          <IconButton
+            aria-label={colorMode === "light" ? "toggle dark" : "toggle light"}
+            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            onClick={toggleColorMode}
+            colorScheme="pink"
+          />
         </HStack>
         {!(session && session.user) && (
-          <Text>
+          <Text p="5">
             Rooftop challenge - Sign in (with google) to get your sorted blocks.
           </Text>
         )}
