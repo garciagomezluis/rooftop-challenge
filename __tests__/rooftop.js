@@ -38,7 +38,7 @@ describe("rooftop services", () => {
         "9r6273tmVthcJmUosJc7HKVVe8v3q6oMZtTKB3RQEo3iif9QkbVaKz9rx0Vqs8HjPbL7AWte8FjsO9Lit75X41fYtnFS6TQ4le0H",
         "nC8Y72MT9nrSWOMnOGOdmD55rmf1pkNcCC6D83eJUwBHNOZSfhgPC2DjBIampgqCBEs4M7LAiL1mtjq9UyYqzQziPsmw04gXnMHe",
       ],
-      "d9222287-0b63-42a9-9d04-f6bde294441a"
+      "d9222287-0b63-42a9-9d04-f6bde294441a" // test token
     );
 
     expect(blocks).toStrictEqual([
