@@ -66,3 +66,7 @@ Get the sorted blocks using an emain of a logged in user. This will get the bloc
 ## App
 
 Using this small app you will be able to log in and automatically get the sorted blocks available for your email. Please visit `http://localhost:3000/` on a development enviroment.
+
+## Live version
+
+[Deployed app](https://rooftop-challenge-five.vercel.app/)
