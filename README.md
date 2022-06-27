@@ -6,6 +6,8 @@
 
 ## Commands
 
+(after installation: git clone ... && npm install ...)
+
 Start a development enviroment on `http://localhost:3000`
 
 > npm run dev
@@ -14,11 +16,20 @@ Run tests
 
 > npm test
 
+### Environment variables
+
+```text
+ROOFTOP_TOKEN=<ROOFTOP TOKEN>
+GOOGLE_ID=<GOOGLE ID>
+GOOGLE_SECRET=<GOOGLE SECRET>
+NEXTAUTH_SECRET=<RANDOMLY GENERATED NUMBER>
+```
+
 ## API
 
 #### Using an environment variable
 
-Get the sorted blocks using a token from an environment variable `ROOFTOP_TOKEN`. This will get the blocks, try to sort them and verify the output.
+Get the sorted blocks using a token set on an environment variable `ROOFTOP_TOKEN`. This will get the blocks, try to sort them and verify the output. Use just on development.
 
 > [GET] /api/check
 
@@ -28,9 +39,9 @@ Get the sorted blocks using a token from an environment variable `ROOFTOP_TOKEN`
     }
 ```
 
-#### Using an email from an logged in user
+#### Using an email of an logged in user
 
-Get the sorted blocks using an emain from a logged in user. This will get the blocks, try to sort them and verify the output.
+Get the sorted blocks using an emain of a logged in user. This will get the blocks, try to sort them and verify the output.
 
 > [GET] /api/blocks
 
