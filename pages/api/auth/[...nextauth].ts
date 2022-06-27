@@ -8,4 +8,5 @@ export const googleProvider = GoogleProvider({
 
 export default NextAuth({
   providers: [googleProvider],
+  secret: process.env.NEXTAUTH_SECRET
 });
